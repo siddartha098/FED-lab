@@ -1,0 +1,26 @@
+<!DOCTYPE html>\
+<html>
+    <head>
+    </head>
+    <body>
+        <input type="button" onclick="getlocation()" value="geolocation">
+         <p id="mslocation"></p>
+         <script type="text/javascript">
+            var mag= document.getElementById("mslocation");
+             function getlocation()
+             {
+                if(navigator.geolocation)
+                {
+                    navigator.geolocation.getCurrentPosition(function(position)
+                    {
+                        mag.innerHTML="latitude1"+position.coords.latitude+"<br> Longitude"+position.coords.longitude+"<br>"
+
+                    :});
+                }
+                else{
+                    msg.innerHTML="geolocation is not suppossed by this browser";
+
+                }
+             }
+</script>
+</body></html>
